@@ -1,7 +1,6 @@
 import streamlit as st
 import joblib
 import pandas as pd
-import base64
 import numpy as np
 
 from sklearn.preprocessing import StandardScaler
@@ -22,9 +21,7 @@ main_tab.write(""":rainbow[This app analyzes and visualizes the airline passenge
 feedback_tab.write('We appreciate your time to help us improve our services.')
 
 # Background Resminin Ayarlanması
-def get_img_as_base64(image_path):
-    with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode("utf-8")
+
 
 
 
