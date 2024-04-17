@@ -11,12 +11,13 @@ df = pd.read_csv("base.csv")
 
 model = joblib.load('kaan2.pkl')
 
-st.title("Hakuna Madata Airlines Passenger Satisfaction")
+st.title("Hakuna Madata 🦁 Airlines Passenger Satisfaction")
+
 
 main_tab, feedback_tab = st.tabs(["Home Page", "FeedBack"])
 
 main_tab.write(""":rainbow[This app analyzes and visualizes the airline passenger satisfaction dataset. Discover the factors that affect passengers' satisfaction levels and predict the satisfaction of flights.]""")
-#right_col.image("Logo.webp")
+main_tab.image("ucakk.jpg", width = 1800)
 # Title and introduction of the survey
 feedback_tab.write('We appreciate your time to help us improve our services.')
 
@@ -36,7 +37,6 @@ with open("style/footer.html", "r", encoding="utf-8") as file:
 main_tab.markdown(footer_html, unsafe_allow_html=True)
 
 
-# Set the width to your desired value
 
 main_tab.markdown(
     f"""
@@ -50,9 +50,7 @@ main_tab.markdown(
     unsafe_allow_html=True,
 )
 
-# URL or local path to your background image
 
-# Function to save responses (this example just prints them to the console)
 def save_responses(responses):
     print("Responses received:")
     for question, response in responses.items():
@@ -86,8 +84,7 @@ def pred_data(df, df_input):
 
     df['Arrival Delay in Minutes'].fillna(df['Arrival Delay in Minutes'].mean(), inplace=True)
     df['satisfaction'].replace({'neutral or dissatisfied': 0, 'satisfied': 1}, inplace=True)
-    # df = df.drop(columns=["Unnamed: 0"])
-    # df = df.drop(columns=["id"])
+
     df = pd.concat([df, df_input], ignore_index=True)
 
     # Yolcu yaşına göre segmentasyon
@@ -149,19 +146,10 @@ def pred_data(df, df_input):
 
     X = df.drop(["satisfaction"], axis=1)
 
-    # Inputun Ölçeklenmiş ve Encode Edilmiş Halinin Modele Hazırlanması
+
     input_df = pd.DataFrame(X.iloc[-1])
 
-    # l1 = [float(df1[0]), float(df1[1]), float(df1[2]), float(df1[3]), int(df1[4]), int(df1[5]),
-    #      int(df1[6]), int(df1[7]), int(df1[8]), int(df1[9]), int(df1[10]), int(df1[11]), int(df1[12]),
-    #      int(df1[13]), int(df1[14]), int(df1[15]), int(df1[16]), int(df1[17]), int(df1[18]), int(df1[19]),
-    #      int(df1[20]), int(df1[21]), int(df1[22]), int(df1[23]), int(df1[24]), int(df1[25]), int(df1[26]),
-    #      int(df1[27]), int(df1[28]), int(df1[29]), int(df1[30]), int(df1[31]), int(df1[32]), int(df1[33])]
 
-    # Input Verilerinden Tek Satırlık DataFrame Oluşturma
-
-    # l2 = np.array(l1).reshape(1, -1)
-    # input_df = pd.DataFrame(l2)
     input_df = input_df.astype(float)
     return input_df.T
 
@@ -330,11 +318,11 @@ if feedback_tab.button('Submit Survey'):
     if (prediction == 0):
          feedback_tab.write(eminlik)
          feedback_tab.write('Customer was not satisfied')
-         st.image('saddest.webp',width=200 )
+         feedback_tab.image('saddest.webp',width=200 )
     else:
          feedback_tab.write(eminlik)
          feedback_tab.write('Customer was  satisfied')
-         st.image('happy.webp', width=200)
+         feedback_tab.image('happy.webp', width=200)
 
     #feedback_tab.write(prediction)
 # Run this with:
