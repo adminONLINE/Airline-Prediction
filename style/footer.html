@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>footer</title>
+     <style>
+        .footer-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(56, 97, 142, 0.3);
+            padding: 1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .copyright {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+
+        .contributors {
+            display: flex;
+            align-items: center;
+            margin-right: 100px;
+        }
+
+        .contributors p {
+            margin: 0;
+            color: rgb(41, 72, 149);
+            font-size: 13px;
+            margin-right: 8px;
+            height: 20px;
+        }
+
+        .contributors a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 2px; /* Bağlantılar arası boşluk */
+            text-decoration: none; /* Bağlantı altını çizmesin */
+        }
+
+        .contributors a .name {
+            display: none; /* İsimleri başlangıçta gizle */
+        }
+
+        .contributors a:hover .name {
+            display: block; /* Bağlantı üzerine gelindiğinde isimleri göster */
+        }
+
+        .contributors a {
+            width: 32px;
+            height: 32px;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="footer-container">
+    <div class="copyright">
+        <p>© 2024 PROJECT : PREDICTION OF AIRLINES PASSENGER SATISFACTION .</p>
+    </div>
+    <div class="contributors" style="display: inline-flex; justify-content: center;">
+        <p>Contributors:</p>
+        <a href="https://www.linkedin.com/in/kaan-olmez-19647b201?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+            <img src="https://media.licdn.com/dms/image/D4D03AQGtm-BH69TaGw/profile-displayphoto-shrink_400_400/0/1706099921133?e=1718841600&v=beta&t=v6vsHSbGwurWxNub-0wPfzNJJJRHW3nnZ9V1qW_u3oA" width="32" height="32">
+            <span class="name">Kaan Ölmez</span>
+        </a>
+        <a href="https://www.linkedin.com/in/f%C3%BCrganince?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bl5oHG7XVROG15FfMOdU%2F4w%3D%3D" target="_blank" rel="noopener noreferrer">
+            <img src="https://media.licdn.com/dms/image/D4D03AQGYOo8mfHwyPw/profile-displayphoto-shrink_400_400/0/1694624718585?e=1718841600&v=beta&t=JyA4YEWlRfNco7dzE4OqQsnHNMYSMmZWTJc8HXKXTc8" width="32" height="32">
+            <span class="name">Fürgan İnce</span>
+        </a>
+        <a href="https://www.linkedin.com/in/m%C3%BCjde-ince-458794204" target="_blank" rel="noopener noreferrer">
+            <img src="https://media.licdn.com/dms/image/D5603AQFC_Z3ChmAGwQ/profile-displayphoto-shrink_400_400/0/1711636682114?e=1718841600&v=beta&t=6Pqzwr9l0OJ_kowgP8nEB3WOVn0xpPBzBnPpS_tUHs4" width="32" height="32">
+            <span class="name">Müjde İnce</span>
+        </a>
+        <a href="https://www.linkedin.com/in/dilara-kizilhan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPTOJjNpbSd2cul70OxMHgQ%3D%3D" target="_blank" rel="noopener noreferrer">
+            <img src="https://media.licdn.com/dms/image/D4D35AQEFVUsALO5GMA/profile-framedphoto-shrink_400_400/0/1684616876148?e=1713949200&v=beta&t=X72pmmXYWcCugJ3rPzRfb72rSc7d1CJ7Y7TDpM_g4vY" width="32" height="32">
+            <span class="name">Dilara Kızılhan</span>
+        </a>
+    </div>
+</div>
+</body>
+</html>
