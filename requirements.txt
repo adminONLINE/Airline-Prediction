@@ -3,3 +3,6 @@ joblib
 pandas
 base64
 numpy
+sklearn
+streamlit
+config
